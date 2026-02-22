@@ -1,0 +1,241 @@
+{
+  "version": 2,
+  "updated": "2026-02-21",
+  "domain": "buk1t.com",
+  "root_subdomain": "www",
+
+  "repos": {
+    "www": "https://github.com/buk1t/www",
+    "labs": "https://github.com/buk1t/labs",
+    "search": "https://github.com/buk1t/search",
+    "api": "https://github.com/buk1t/api",
+    "wildcard": "https://github.com/buk1t/catch-all",
+    "404": "https://github.com/buk1t/404"
+  },
+
+  "services": [
+    {
+      "id": "www",
+      "name": "Home",
+      "subdomain": "www",
+      "base_url": "https://www.buk1t.com",
+      "check_url": "https://www.buk1t.com/",
+      "config_url": "https://api.buk1t.com/apps/www/www.json",
+      "tags": ["site", "core"],
+      "card": {
+        "title": "Home",
+        "desc": "Calm Now page + app directory.",
+        "pill_tags": ["core", "hub"],
+        "glyph": "home"
+      }
+    },
+    {
+      "id": "search",
+      "name": "Search",
+      "subdomain": "search",
+      "base_url": "https://search.buk1t.com",
+      "check_url": "https://search.buk1t.com/",
+      "config_url": "https://api.buk1t.com/apps/search/search.json",
+      "tags": ["app", "core"],
+      "card": {
+        "title": "Search",
+        "desc": "Fast routing across buk1t.",
+        "pill_tags": ["core", "fast"],
+        "glyph": "search"
+      }
+    },
+    {
+      "id": "labs",
+      "name": "Labs",
+      "subdomain": "labs",
+      "base_url": "https://labs.buk1t.com",
+      "check_url": "https://labs.buk1t.com/",
+      "config_url": "https://api.buk1t.com/apps/labs/labs.json",
+      "tags": ["app", "projects", "experimental"],
+      "card": {
+        "title": "Labs",
+        "desc": "Experiments, prototypes, fun stuff.",
+        "pill_tags": ["play", "projects"],
+        "glyph": "spark"
+      }
+    },
+    {
+      "id": "api",
+      "name": "API",
+      "subdomain": "api",
+      "base_url": "https://api.buk1t.com",
+      "check_url": "https://api.buk1t.com/health",
+      "tags": ["infra", "data"],
+      "card": {
+        "title": "API",
+        "desc": "Static assets + JSON source of truth.",
+        "pill_tags": ["infra", "data"],
+        "glyph": "code"
+      }
+    },
+    {
+      "id": "404",
+      "name": "404",
+      "subdomain": "404",
+      "base_url": "https://404.buk1t.com",
+      "check_url": "https://404.buk1t.com/",
+      "tags": ["infra", "routing"],
+      "card": {
+        "title": "404",
+        "desc": "Shared not-found page (optional dependency).",
+        "pill_tags": ["infra"],
+        "glyph": "alert"
+      }
+    }
+  ],
+
+  "pages": [
+    {
+      "id": "www-home",
+      "service": "www",
+      "path": "/",
+      "name": "home",
+      "keywords": ["home", "now", "buk1t"],
+      "tags": ["core", "now"],
+      "card": {
+        "title": "Now",
+        "desc": "What I’m working on.",
+        "pill_tags": ["now"],
+        "glyph": "home"
+      }
+    },
+    {
+      "id": "www-apps",
+      "service": "www",
+      "path": "/apps/",
+      "name": "apps",
+      "keywords": ["apps", "directory", "services", "projects", "tools"],
+      "tags": ["core", "directory"],
+      "card": {
+        "title": "Apps",
+        "desc": "Directory of buk1t apps.",
+        "pill_tags": ["directory"],
+        "glyph": "grid"
+      }
+    },
+    {
+      "id": "www-about",
+      "service": "www",
+      "path": "/about/",
+      "name": "about",
+      "keywords": ["about", "who", "info"],
+      "tags": ["site"],
+      "card": {
+        "title": "About",
+        "desc": "What buk1t is + who built it.",
+        "pill_tags": ["story", "human"],
+        "glyph": "user"
+      }
+    },
+    {
+      "id": "www-contact",
+      "service": "www",
+      "path": "/contact/",
+      "name": "contact",
+      "keywords": ["contact", "email", "dev"],
+      "tags": ["site"],
+      "card": {
+        "title": "Contact",
+        "desc": "Reach me at dev@buk1t.com.",
+        "pill_tags": ["email"],
+        "glyph": "mail"
+      }
+    },
+    {
+      "id": "www-status",
+      "service": "www",
+      "path": "/status/",
+      "name": "status",
+      "keywords": ["status", "uptime", "health", "latency"],
+      "tags": ["core", "uptime"],
+      "card": {
+        "title": "Status",
+        "desc": "Lightweight health overview.",
+        "pill_tags": ["uptime"],
+        "glyph": "pulse"
+      }
+    },
+
+    {
+      "id": "labs-soundscapes",
+      "service": "labs",
+      "path": "/soundscapes/",
+      "name": "soundscapes",
+      "keywords": ["soundscapes", "ambient", "audio", "mix", "focus"],
+      "tags": ["project", "audio"],
+      "card": {
+        "title": "Soundscapes",
+        "desc": "Ambient background for studying.",
+        "pill_tags": ["audio", "focus"],
+        "glyph": "spark"
+      }
+    },
+    {
+      "id": "labs-unfinished",
+      "service": "labs",
+      "path": "/unfinished/",
+      "name": "unfinished",
+      "keywords": ["unfinished", "chaos", "drafts", "experimental"],
+      "tags": ["project", "archive"],
+      "card": {
+        "title": "Unfinished",
+        "desc": "Drafts, dead ends, and weird ideas.",
+        "pill_tags": ["drafts"],
+        "glyph": "spark"
+      }
+    },
+
+    {
+      "id": "search-settings",
+      "service": "search",
+      "path": "/settings/",
+      "name": "settings",
+      "keywords": ["settings", "preferences", "configuration"],
+      "tags": ["settings"]
+    },
+    {
+      "id": "search-theme",
+      "service": "search",
+      "path": "/theme/",
+      "name": "theme",
+      "keywords": ["theme", "appearance", "dark mode", "light mode"],
+      "tags": ["theme"]
+    },
+    {
+      "id": "search-changelog",
+      "service": "search",
+      "path": "/changelog/",
+      "name": "changelog",
+      "keywords": ["changelog", "changes", "versions", "updates"],
+      "tags": ["changelog"]
+    }
+  ],
+
+  "redirects": [
+    {
+      "from": "https://about.buk1t.com/",
+      "to": "https://www.buk1t.com/about/",
+      "type": 301
+    },
+    {
+      "from": "https://about.buk1t.com/projects/",
+      "to": "https://www.buk1t.com/about/projects/",
+      "type": 301
+    },
+    {
+      "from": "https://about.buk1t.com/now/",
+      "to": "https://www.buk1t.com/",
+      "type": 301
+    },
+    {
+      "from": "https://status.buk1t.com/",
+      "to": "https://www.buk1t.com/status/",
+      "type": 301
+    }
+  ]
+}
