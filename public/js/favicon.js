@@ -51,18 +51,18 @@ function cssVar(name) {
   }
 }
 
-function pickAccent(accentSetting) {
+function pickColor(accentSetting) {
   const a = String(accentSetting || "").trim();
 
-  // Explicit color wins
   if (a && a !== "auto") return a;
 
-  // Auto: read CSS vars
+  // Prefer favicon-specific variable
   return (
+    cssVar("--favicon") ||
     cssVar("--accent") ||
     cssVar("--brand") ||
     cssVar("--primary") ||
-    "#7aa7ff"
+    "#000"
   );
 }
 
@@ -120,7 +120,7 @@ function install({ appTitle, themeColor, colorScheme, accent }) {
   removeAllLinks("apple-touch-icon");
   removeAllLinks("manifest");
 
-  const chosen = pickAccent(accent);
+  const chosen = pickColor(accent);
 
   // Dynamic SVG favicon (themed)
   const svgHref = toDataSvg(svgFavicon(chosen));
