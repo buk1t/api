@@ -75,10 +75,10 @@ function install({ appTitle, themeColor, colorScheme, accent }) {
   const href = toDataSvg(svgFavicon(chosen));
 
   addLink("icon", href, { type: "image/svg+xml" });
-  addLink("icon", `${BASE}/favicon-96x96.png`, { type: "image/png", sizes: "96x96" });
-  addLink("shortcut icon", `${BASE}/favicon.ico`);
-  addLink("apple-touch-icon", `${BASE}/apple-touch-icon.png`, { sizes: "180x180" });
-  addLink("manifest", `${BASE}/site.webmanifest`);
+  //addLink("icon", `${BASE}/favicon-96x96.png`, { type: "image/png", sizes: "96x96" });
+  //addLink("shortcut icon", `${BASE}/favicon.ico`);
+  //addLink("apple-touch-icon", `${BASE}/apple-touch-icon.png`, { sizes: "180x180" });
+  //addLink("manifest", `${BASE}/site.webmanifest`);
 }
 
 function waitForAccent(accentSetting, tries = 8) {
