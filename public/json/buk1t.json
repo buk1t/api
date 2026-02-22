@@ -60,20 +60,6 @@
       }
     },
     {
-      "id": "api",
-      "name": "API",
-      "subdomain": "api",
-      "base_url": "https://api.buk1t.com",
-      "check_url": "https://api.buk1t.com/health",
-      "tags": ["infra", "data"],
-      "card": {
-        "title": "API",
-        "desc": "Static assets + JSON source of truth.",
-        "pill_tags": ["infra", "data"],
-        "glyph": "code"
-      }
-    },
-    {
       "id": "404",
       "name": "404",
       "subdomain": "404",
