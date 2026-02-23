@@ -139,7 +139,7 @@ function waitForCssVars(accentSetting, tries = 8) {
   // If accent is "auto", give CSS a moment to load so --accent exists
   return new Promise((resolve) => {
     const tick = () => {
-      const a = pickAccent(accentSetting);
+      const a = pickColor(accentSetting);
       // If still fallback-ish and we have tries left, keep waiting a frame
       if (String(accentSetting) === "auto" && (!a || a === "#7aa7ff") && tries > 0) {
         tries -= 1;
